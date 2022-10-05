@@ -1,16 +1,16 @@
 # Vtk Collection Mesher
 
-Applies a simple octotree meshing algorithm (see chapter 8 of [this book](https://books.google.co.za/books/about/Automatic_Mesh_Generation.html?id=a6yPzQEACAAJ&redir_esc=y)) to [VTK](https://vtk.org/) poly-data objects using 
+Applies a simple octree meshing algorithm (see chapter 8 of [this book](https://books.google.co.za/books/about/Automatic_Mesh_Generation.html?id=a6yPzQEACAAJ&redir_esc=y)) to [VTK](https://vtk.org/) poly-data objects using 
 the [deal.ii](https://www.dealii.org/) finite element library.
 
-# Funcitonality example: meshing a voronoi tesselation with complex geometries imbedded in it
+# Functionality example: meshing a voronoi tesselation with complex geometries embedded in it
 
-Consider the voronoi tesselation below that has complex geometries embbedded in it.
+Consider the voronoi tesselation below that has complex geometries embedded in it.
 
 ![alt text](https://github.com/BenAlheit/vtk-collection-mesher_public/blob/master/imgs/voronois.png?raw=true)
 
 This geometry is intended to be an approximation of the microstructure of a polycrystalline metal (the voronoi tesselation) that has intermetallic particles 
-(the complex geometries, abbreviated as IMPs) embbeded in it. The IMPs are created using image analysis of optical microscopy images (see this [this repo](https://github.com/BenAlheit/imp-image-analysis_public)
+(the complex geometries, abbreviated as IMPs) embedded in it. The IMPs are created using image analysis of optical microscopy images (see this [this repo](https://github.com/BenAlheit/imp-image-analysis_public)
 for details).
 
 The meshing algorithm is incredibly simple:
@@ -25,6 +25,6 @@ if an element is part of a periodic pair and is refined then its partner must be
 Ideally, there would be a final step that splits the final intersecting cells into a combination of hexahedral, tetrahedral, and wedge elements. However, 
 the finite element library at hand only supports hexahedral elements. 
 
-The resulting mesh for the geometry displayed above is presented below for increseasing numbers of iterations.
+The resulting mesh for the geometry displayed above is presented below for increasing numbers of iterations.
 
 ![alt text](https://github.com/BenAlheit/vtk-collection-mesher_public/blob/master/imgs/meshes-together.png?raw=true)
