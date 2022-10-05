@@ -7,7 +7,7 @@ the [deal.ii](https://www.dealii.org/) finite element library.
 
 Consider the voronoi tesselation below that has complex geometries embbedded in it.
 
-![alt text](https://github.com/BenAlheit/vtk-collection-mesher_public/blob/master/imgs/voronois.png?raw=true)
+![alt text](https://github.com/BenAlheit/vtk-collection-mesher/blob/master/imgs/voronois.png?raw=true)
 
 This geometry is intended to be an approximation of the microstructure of a polycrystalline metal (the voronoi tesselation) that has intermetallic particles 
 (the complex geometries, abbreviated as IMPs) embbeded in it. The IMPs are created using image analysis of optical microscopy images (see this [this repo](https://github.com/BenAlheit/imp-image-analysis_public)
